@@ -1,0 +1,9 @@
+.layout {
+  @apply grid w-full;
+  grid-template-areas:
+    "header header"
+    "main main";
+  height: 100vh;
+  grid-template-columns:1fr;
+  grid-template-rows: 30vh 70vh;
+}

@@ -1,0 +1,71 @@
+.aside {
+  @apply absolute z-[9999];
+  .sidebar {
+    @apply bg-[#2f292d] md:absolute  lg:w-[20vw]  md:w-[30vw] md:z-[9999] h-[100vh] md:opacity-90 opacity-0 invisible w-0 md:visible;
+    transition: width 0.5s ease-in-out;
+    .logo {
+      @apply h-[30vh] flex justify-center items-center;
+    }
+    .list {
+      @apply my-4 text-center;
+
+      .item {
+        @apply cursor-pointer;
+        transition: color 0.3s ease-in-out;
+        font-family: "Roboto-Light";
+        &:nth-child(odd) {
+          color: #fff;
+        }
+
+        &:nth-child(even) {
+          color: #3ec9f2;
+        }
+
+        &:nth-child(4n - 3) {
+          font-size: 2rem;
+        }
+
+        &:nth-child(4n - 2) {
+          font-size: 1rem;
+        }
+
+        &:nth-child(4n - 1) {
+          font-size: 1.25rem;
+        }
+
+        &:nth-child(4n) {
+          font-size: 1.5rem;
+        }
+        &:hover {
+          color: red;
+        }
+      }
+      .active {
+        @apply text-[#3ec9f2] #{!important};
+        @apply bg-[#404146];
+      }
+    }
+  }
+  .menu {
+    @apply block md:hidden cursor-pointer mt-5 ml-3;
+    input {
+      @apply hidden;
+    }
+  }
+  .cancel {
+    @apply absolute bottom-[2%] opacity-0 invisible;
+  }
+  &:has(input:checked) {
+    .sidebar {
+      @apply w-[100vw] opacity-100 visible;
+      transition: width 0.5s ease-in-out;
+    }
+    .menu {
+      @apply hidden;
+    }
+    .cancel {
+      @apply absolute top-[1%] right-[1%] visible opacity-100 cursor-pointer;
+      
+    }
+  }
+}
