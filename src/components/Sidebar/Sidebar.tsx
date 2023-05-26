@@ -1,8 +1,8 @@
 import styles from "./Sidebar.module.scss";
 import { useAppContext } from "@context/appContext";
 import Logo from "@images/logo/the-godfather.svg";
-import Close from "@images/close.svg";
-import Menu from "@images/menu.svg";
+import Close from "@images/icons/close.svg";
+import Menu from "@images/icons/menu.svg";
 import { slugify, mergeClasses } from "@utils/string";
 import { Link, useParams } from "react-router-dom";
 const Sidebar = () => {

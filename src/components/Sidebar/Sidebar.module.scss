@@ -10,7 +10,7 @@
       @apply my-4 text-center;
 
       .item {
-        @apply cursor-pointer;
+        @apply cursor-pointer p-2;
         transition: color 0.3s ease-in-out;
         font-family: "Roboto-Light";
         &:nth-child(odd) {
